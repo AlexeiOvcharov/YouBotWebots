@@ -1,0 +1,153 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+  info [
+    "Simulation of the KUKA youBot robot."
+    "This model includes an accurate and fast simulation of the Meccanum wheels."
+    "The robot can be equiped with various sensors (including the Microsoft Kinect) and configured with zero, one or two arms."
+  ]
+  title "KUKA youBot"
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      material1 "InteriorWheelMat"
+      coulombFriction [
+        1.8, 0, 0.2
+      ]
+      frictionRotation -0.9648 0
+      bounce 0
+      forceDependentSlip [
+        10, 0
+      ]
+    }
+    ContactProperties {
+      material1 "ExteriorWheelMat"
+      coulombFriction [
+        1.8, 0, 0.2
+      ]
+      frictionRotation 0.9648 0
+      bounce 0
+      forceDependentSlip [
+        10, 0
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.11063901827987448 0.986544754887027 0.12036799507743627 2.0249494029802713
+  position 2.9316773987704843 0.7040631898017357 -1.8206973470226404
+  follow "youBot"
+}
+Floor {
+}
+Robot {
+  translation 0.53 0.32536 -1.55
+  rotation 0 0 1 0.523599
+  children [
+    Kinect {
+      hidden translation_1 0 0.05 0
+      translation -5.8854164570742995e-06 -1.0194839744681605e-05 0
+      rotation -2.1483888572374146e-08 0.9999999999999996 2.148380975387748e-08 1.5708000000000009
+      width 1280
+      height 1024
+    }
+  ]
+  name "texnoman"
+  controller "ros"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DEF Box Wall {
+  translation 2.22 0.01 -3.49
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(8)"
+  size 0.3 0.1 0.5
+}
+DEF Box Wall {
+  translation 1.13 0.01 -3.49
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(7)"
+  size 0.3 0.1 0.5
+}
+DEF Box Wall {
+  translation 0.19 0.01 -1.52
+  name "wall(5)"
+  size 0.3 0.1 0.5
+}
+DEF Box Wall {
+  translation 0.19 0.01 -3.03
+  name "wall(6)"
+  size 0.3 0.1 0.5
+}
+DEF Polygon Wall {
+  translation 1.34 0 -0.74
+  name "wall(2)"
+  size 0.4 0.2 0.05
+}
+DEF Polygon Wall {
+  translation 1 0 -2.05
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(3)"
+  size 0.4 0.2 0.05
+}
+DEF Polygon Wall {
+  translation 1.65 0 -2.05
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(4)"
+  size 0.4 0.2 0.05
+}
+Youbot {
+  hidden translation_3 0 0 0.077
+  hidden rotation_3 4.0885418171462554e-07 -9.273385666729654e-07 0.9999999999994863 1.0000018786572173
+  hidden translation_4 0.033 0 0.07
+  hidden rotation_4 0 -1 0 1.5700105421999508
+  hidden translation_5 0 0 0.155
+  hidden rotation_5 0 1 0 2.635005898447964
+  hidden translation_6 0 0 0.135
+  hidden rotation_6 0 -1 0 1.7800016937163134
+  hidden translation_7 0 0 0.081
+  hidden rotation_7 0 0 1 0
+  hidden translation_8 0 -4.99435576110023e-10 0.09
+  hidden rotation_8 1 0 0 4.71239
+  hidden translation_9 0 -3.0019793368232244e-09 0.09
+  hidden rotation_9 0 -0.7071067811865476 0.7071067811865476 3.14159
+  hidden translation_10 0.228 -0.158 -0.055
+  hidden rotation_10 -2.001956060842126e-10 1 -8.130687198882777e-10 3.1691024127484555
+  hidden translation_11 0.228 0.158 -0.055
+  hidden rotation_11 -1.8994023758675738e-10 1 2.363167225565973e-11 5.488992450517907
+  hidden translation_12 -0.228 -0.158 -0.055
+  hidden rotation_12 -1.2138436269065321e-09 1 1.209292458079927e-09 1.0398389996464685
+  hidden translation_13 -0.228 0.158 -0.055
+  hidden rotation_13 -4.173849132229154e-10 -0.9999999999999999 1.1958215235573178e-10 0.41168088546782466
+  translation 0.8791142938838445 0.10192173569104802 -1.063228385484032
+  rotation -0.7750879631982626 0.44756000450741923 0.44601422810319363 1.8234839814728327
+  controller "ros"
+  supervisor TRUE
+  bodySlot [
+    Transform {
+    }
+    HokuyoUrg04lxug01 {
+      translation 0.3 -3.05886e-08 -0.03
+      rotation -0.5773509358560258 0.577349935856137 0.577349935856137 -2.094395307179586
+    }
+  ]
+}
+DEF Polygon Wall {
+  translation 0 0 -0.74
+  size 0.4 0.2 0.05
+}
+DEF Polygon Wall {
+  translation -0.22 0 -2.22
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(1)"
+  size 3 0.2 0.05
+}
+M20 {
+  translation 0.19 0.11899514658993894 -1.39
+  rotation -0.9935559315443468 0.11263664950199147 -0.012633134290838129 -2.05614729356979e-16
+}
+M20_100 {
+  translation 0.17853028987175668 0.12830720789555464 -1.4876101118164131
+  rotation 0.2959097742573773 0.0716436736013395 0.952525374744344 -1.645948619014883
+}
